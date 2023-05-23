@@ -3,10 +3,15 @@ import { AboutSocialLink } from '@/components/SocialLink';
 import { Container } from '@/components/Container';
 import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons';
 import { MailIcon } from '@/components/Icons';
+import Head from 'next/head';
 
 export default function About() {
   return (
     <>
+      <Head>
+        <title>About - Steve Volocyk</title>
+        <meta name="description" content="About Me" />
+      </Head>
       <Container className="mt-16 sm:mt-32">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">
@@ -39,37 +44,45 @@ export default function About() {
                 profound impact on my life.
               </p>
               <p>
-                When I wasn&apos;t preoccupied with designing crazy games, I
-                would be tinkering with computers (as it was the <i>thing</i>{' '}
-                that allowed me to play games). I still vividly remember
-                installing a &quot;scuzzy&quot; drive with my father on our
-                family computer. He claimed it would rocket us into the
-                peripherals stratosphere, and he was right. I had never seen
-                loading screens that short.
+                When I wasn&apos;t preoccupied with designing crazy games, you
+                would find me tinkering with computers (as it was the thing that
+                allowed me to play games). I still vividly remember installing a
+                &quot;scuzzy&quot; drive with my father on our family computer.
+                He claimed it would rocket us into the peripherals stratosphere,
+                and he was right. I had never seen loading screens that short.
               </p>
               <p>
                 I soon realized that most of my interests were centered around
                 games, computers, and building things in general. Those
                 interests lead to my pursuit of a degree in Computer Science,
-                which allowed me to complete the ultimate trifecta of playing,
-                assembling, and programming.
+                which allowed me to complete the ultimate gamer trifecta of
+                playing, assembling, and programming.
               </p>
               <p>
                 Today, I&apos;m still a gamer, tinkerer, and builder. I have
                 developed software for a wide array of industries and
                 communities, including games, player support, accounts, banking,
-                ecommerce, social, and more. My proudest moments have been
-                developing software and tools that has helped to foster gaming
-                communities, and I hope to continue to do so for years to come.
+                ecommerce, social networking, and more. While I have developed
+                many different types of software, my most memorable and
+                impactful work has been developing software and tools that
+                helped foster and support gaming communities.
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <AboutSocialLink href="https://github.com/Jynx" icon={GitHubIcon} className="mt-4">
+              <AboutSocialLink
+                href="https://github.com/Jynx"
+                icon={GitHubIcon}
+                className="mt-4"
+              >
                 Follow on GitHub
               </AboutSocialLink>
-              <AboutSocialLink href="https://www.linkedin.com/in/steven-volocyk/" icon={LinkedInIcon} className="mt-4">
+              <AboutSocialLink
+                href="https://www.linkedin.com/in/steven-volocyk/"
+                icon={LinkedInIcon}
+                className="mt-4"
+              >
                 Follow on LinkedIn
               </AboutSocialLink>
               <AboutSocialLink

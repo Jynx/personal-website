@@ -1,10 +1,35 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Card from '@/components/Card';
 import SimplePageLayout from '@/components/SimplePageLayout';
 import { LinkIcon } from '@/components/Icons';
 
-const projects = [
+import omg from '../../public/omg.png';
+import cabin from '../../public/cabin.png';
+import train from '../../public/train.png';
+import scarfy from '../../public/scarfy.png';
+import unreal from '../../public/Ureallogo.png';
+
+interface Project {
+  name: string;
+  description: string;
+  link: {
+    href: string;
+    label: string;
+  };
+  logo: StaticImageData;
+}
+
+const projects: Array<Project> = [
+  {
+    name: 'One More Game Account Site',
+    description: 'Minimal Account website we used for alpha testing at OMG',
+    link: {
+      href: 'https://login.onemoregame.com',
+      label: 'Website',
+    },
+    logo: omg,
+  },
   {
     name: 'GR Town',
     description: 'A wonderful 3D winter town built using legacy OpenGL',
@@ -12,14 +37,34 @@ const projects = [
       href: 'https://github.com/Jynx/UW_Madison_ComputerGraphics_GrTown',
       label: 'github.com',
     },
-    logo: '/cabin.png',
+    logo: cabin,
   },
   {
     name: 'GR Train',
-    description:
-      'Take a ride on the 3D train! (Also legacy open GL)',
-    link: { href: 'https://github.com/Jynx/UW_Madison_ComputerGraphics_Train_Project', label: 'github.com' },
-    logo: '/train.png',
+    description: 'Take a ride on the 3D train! (Also legacy open GL)',
+    link: {
+      href: 'https://github.com/Jynx/UW_Madison_ComputerGraphics_Train_Project',
+      label: 'github.com',
+    },
+    logo: train,
+  },
+  {
+    name: '2D Side Scroller',
+    description: 'Side scroller based on tutorial from gamedev.tv',
+    link: {
+      href: 'https://github.com/Jynx/demo-sidescroller',
+      label: 'github.com',
+    },
+    logo: scarfy,
+  },
+  {
+    name: 'Unreal Engine Blueprint basics',
+    description: 'Projectile game based on tutorial from gamedev.tv',
+    link: {
+      href: 'https://www.youtube.com/watch?v=yTgSTlZjYWY',
+      label: 'youtube.com',
+    },
+    logo: unreal,
   },
 ];
 
@@ -27,10 +72,10 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects - Spencer Sharp</title>
+        <title>Projects - Steve Volocyk</title>
         <meta
           name="description"
-          content="Things I’ve made trying to put my dent in the universe."
+          content="Things I’ve made"
         />
       </Head>
       <SimplePageLayout
@@ -46,8 +91,6 @@ export default function Projects() {
               <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={project.logo}
-                  width={64}
-                  height={64}
                   alt=""
                   className="h-8 w-8"
                   unoptimized

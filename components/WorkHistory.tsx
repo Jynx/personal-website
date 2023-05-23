@@ -1,11 +1,15 @@
-import Image from 'next/image';
-import { ArrowDownIcon, BriefcaseIcon } from '@/components/Icons';
-import Button from '@/components/Button';
+import Image, { StaticImageData } from 'next/image';
+import {  BriefcaseIcon } from '@/components/Icons';
+
+import omg from '../public/omg.png';
+import i11 from '../public/i11.png';
+import perf from '../public/perf.png';
+import sap from '../public/sap.png';
 
 interface Resume {
   company: string;
   title: string;
-  logo: any;
+  logo: StaticImageData;
   start: string;
   end: string;
 }
@@ -15,30 +19,30 @@ export default function WorkHistory() {
     {
       company: 'One More Game',
       title: 'Sr Web Services and Platform Engineer',
-      logo: '/omg.png',
-      start: '2021',
-      end: 'April 2023',
+      logo: omg,
+      start: 'Aug 2021',
+      end: 'Apr 2023',
     },
     {
       company: 'Inspire 11',
       title: 'Solutions Architect & Sr Software Engineer',
-      logo: '/i11.png',
-      start: '2019',
-      end: '2021',
+      logo: i11,
+      start: 'Sep 2019',
+      end: 'Aug 2021',
     },
     {
       company: 'Perficient',
       title: 'Sr. Technical Consultant & Technical Consultant',
-      logo: '/perf.png',
-      start: '2016',
-      end: '2019',
+      logo: perf,
+      start: 'Nov 2016',
+      end: 'Sep 2019',
     },
     {
       company: 'SAP Fieldglass',
       title: 'Java Developer',
-      logo: '/sap.png',
-      start: '2014',
-      end: '2016',
+      logo: sap,
+      start: 'Jun 2015',
+      end: 'Oct 2016',
     },
   ];
 
@@ -52,7 +56,7 @@ export default function WorkHistory() {
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" width={64} height={64} unoptimized />
+              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
@@ -76,10 +80,6 @@ export default function WorkHistory() {
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
     </div>
   );
 }
