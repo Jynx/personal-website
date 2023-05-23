@@ -14,16 +14,16 @@ export default function Home() {
               Software developer, tinkerer, and lover of games.
             </h1>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-              I’m Steve, a software engineer and gamer based in the suburbs of Chicago.
+              I’m Steve, a software engineer and gamer based in the suburbs of Chicago. With over nine years of experience developing software platforms and complex web applications, I have both lead and been members of teams that delivered software built to support video games, player support, accounts, financial, medical, e-commerce, helpdesk and social networking systems.
             </p>
             <div className="mt-6 flex gap-6">
               <SocialLink
-                href="https://github.com"
+                href="https://github.com/Jynx"
                 aria-label="Follow on GitHub"
                 icon={GitHubIcon}
               />
               <SocialLink
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/steven-volocyk/"
                 aria-label="Follow on LinkedIn"
                 icon={LinkedInIcon}
               />

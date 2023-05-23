@@ -33,38 +33,43 @@ export default function About() {
                 by Space Quest and Hero Quest, staple adventure games of that
                 time period, you played as a main character trapped in a world
                 of aliens, monsters, ...and apparently a ridiculous amount of
-                fart jokes? At least that&apos;s what the 2 page word document (now
-                framed on my wall) describes. It seems crazy looking back on it
-                now, but I was 6, I was proud of it, and it would have a
+                fart jokes? At least that&apos;s what the 2 page word document
+                (now framed on my wall) describes. It seems crazy looking back
+                on it now, but I was 6, I was proud of it, and it would have a
                 profound impact on my life.
               </p>
               <p>
-                When I wasn&apos;t preoccupied with designing crazy games, I would be
-                tinkering with computers (as it was the <i>thing</i> that
-                allowed me to play games). I still vividly remember installing a
-                &quot;scuzzy&quot; drive with my father on our family computer.
-                He claimed it would rocket us into the peripherals stratosphere,
-                and he was right. I had never seen loading screens that short.
+                When I wasn&apos;t preoccupied with designing crazy games, I
+                would be tinkering with computers (as it was the <i>thing</i>{' '}
+                that allowed me to play games). I still vividly remember
+                installing a &quot;scuzzy&quot; drive with my father on our
+                family computer. He claimed it would rocket us into the
+                peripherals stratosphere, and he was right. I had never seen
+                loading screens that short.
               </p>
               <p>
                 I soon realized that most of my interests were centered around
-                games, computers, and building things in general. Those interests 
-                lead to my pursuit of a degree in Computer Science, which allowed me 
-                to complete the ultimate trifecta of playing, assembling, and programming.
+                games, computers, and building things in general. Those
+                interests lead to my pursuit of a degree in Computer Science,
+                which allowed me to complete the ultimate trifecta of playing,
+                assembling, and programming.
               </p>
-              <p>Today, I&apos;m still a gamer, tinkerer, and builder. I have developed software for a wide array 
-                of industries and communities, including games, player support, accounts, banking, ecommerce, 
-                social, and more. My proudest moments have been developing software and tools that has helped 
-                to foster gaming communities, and I hope to continue to do so for years to come.
-                  </p>
+              <p>
+                Today, I&apos;m still a gamer, tinkerer, and builder. I have
+                developed software for a wide array of industries and
+                communities, including games, player support, accounts, banking,
+                ecommerce, social, and more. My proudest moments have been
+                developing software and tools that has helped to foster gaming
+                communities, and I hope to continue to do so for years to come.
+              </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <AboutSocialLink href="#" icon={GitHubIcon} className="mt-4">
+              <AboutSocialLink href="https://github.com/Jynx" icon={GitHubIcon} className="mt-4">
                 Follow on GitHub
               </AboutSocialLink>
-              <AboutSocialLink href="#" icon={LinkedInIcon} className="mt-4">
+              <AboutSocialLink href="https://www.linkedin.com/in/steven-volocyk/" icon={LinkedInIcon} className="mt-4">
                 Follow on LinkedIn
               </AboutSocialLink>
               <AboutSocialLink

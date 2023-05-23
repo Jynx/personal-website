@@ -2,10 +2,10 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
 import { Container } from '@/components/Container';
-import { MoonIcon, SunIcon } from '@/components/NavIcons';
+import { MoonIcon, SunIcon, HomeIcon } from '@/components/NavIcons';
 import Avatar, { AvatarContainer } from '@/components/Avatar';
 import MobileNavigation from '@/components/MobileNavigation';
 
@@ -101,6 +101,7 @@ const clamp = (number: number, a: number, b: number): number => {
 
 export function Navigation() {
   const isHomePage = usePathname() === '/';
+  const router = useRouter();
 
   let headerRef = useRef<HTMLDivElement | null>(null);
   let avatarRef = useRef<HTMLDivElement | null>(null);
@@ -265,7 +266,24 @@ export function Navigation() {
           >
             <div className="relative flex gap-4">
               <div className="flex flex-1">
-                {!isHomePage && <div>HOME</div>}
+                {!isHomePage && (
+                  <div className="pointer-events-auto">
+                    <button
+                      type="button"
+                      aria-label="Go Home"
+                      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+                      onClick={() => router.push('/')}
+                    >
+                      <HomeIcon
+                        className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition 
+                        group-hover:fill-zinc-200
+                        dark:fill-zinc-700
+                        dark:stroke-teal-500
+                        dark:group-hover:fill-zinc-700"
+                      />
+                    </button>
+                  </div>
+                )}
               </div>
               <div className="flex flex-1 justify-end md:justify-center">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
