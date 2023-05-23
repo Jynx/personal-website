@@ -80,7 +80,7 @@ export default function Projects() {
       </Head>
       <SimplePageLayout
         title="Where the tinkering happens."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of."
+        intro="I’ve worked on many different small and large-scale projects over the years but these are some of the most memorable, hilarious (open GL college projects), or educational to date."
       >
         <ul
           role="list"
