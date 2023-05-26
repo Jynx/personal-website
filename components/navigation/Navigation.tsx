@@ -4,10 +4,10 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
-import { Container } from '@/components/Container';
-import { MoonIcon, SunIcon, HomeIcon } from '@/components/NavIcons';
+import { Container } from '@/components/layout/Container';
+import { MoonIcon, SunIcon, HomeIcon } from '@/components/icons/NavIcons';
 import Avatar, { AvatarContainer } from '@/components/Avatar';
-import MobileNavigation from '@/components/MobileNavigation';
+import MobileNavigation from '@/components/navigation/MobileNavigation';
 
 const NavItem = ({
   href,

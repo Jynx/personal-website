@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { AboutSocialLink } from '@/components/SocialLink';
-import { Container } from '@/components/Container';
-import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons';
-import { MailIcon } from '@/components/Icons';
+import { Container } from '@/components/layout/Container';
+import { GitHubIcon, LinkedInIcon } from '@/components/icons/SocialIcons';
+import { MailIcon } from '@/components/icons/Icons';
 import Head from 'next/head';
 
 export default function About() {

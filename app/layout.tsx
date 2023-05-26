@@ -1,7 +1,7 @@
 import './globals.css';
-import Footer from '@/components/Footer';
+import Footer from '@/components/layout/Footer';
 import { Metadata } from 'next';
-import { Navigation } from '@/components/Navigation';
+import { Navigation } from '@/components/navigation/Navigation';
 import { OpenGraph } from 'next/dist/lib/metadata/types/opengraph-types';
 import { Twitter } from 'next/dist/lib/metadata/types/twitter-types';
 
