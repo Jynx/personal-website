@@ -1,6 +1,6 @@
-import { Container } from '@/components/Container';
+import { Container } from '@/components/layout/Container';
 import SocialLink from '@/components/SocialLink';
-import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons';
+import { GitHubIcon, LinkedInIcon } from '@/components/icons/SocialIcons';
 import Photos from '@/components/Photos';
 import WorkHistory from '@/components/WorkHistory';
 

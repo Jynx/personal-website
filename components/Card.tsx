@@ -1,7 +1,7 @@
 import Link, { LinkProps } from 'next/link';
 import clsx from 'clsx';
 
-import { ChevronRightIcon } from '@/components/NavIcons';
+import { ChevronRightIcon } from '@/components/icons/NavIcons';
 import { ReactNode } from 'react';
 
 export default function Card({

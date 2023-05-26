@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
-import { ChevronDownIcon, CloseIcon } from '@/components/NavIcons';
+import { ChevronDownIcon, CloseIcon } from '@/components/icons/NavIcons';
 
 export default function MobileNavigation({ className }: { className: string }) {
   return (

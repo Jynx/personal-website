@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
-import {  BriefcaseIcon } from '@/components/Icons';
+import {  BriefcaseIcon } from '@/components/icons/Icons';
 
 import omg from '../public/omg.png';
 import i11 from '../public/i11.png';

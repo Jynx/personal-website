@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image, { StaticImageData } from 'next/image';
 import Card from '@/components/Card';
-import SimplePageLayout from '@/components/SimplePageLayout';
-import { LinkIcon } from '@/components/Icons';
+import SimplePageLayout from '@/components/layout/SimplePageLayout';
+import { LinkIcon } from '@/components/icons/Icons';
 
 import omg from '../../public/omg.png';
 import cabin from '../../public/cabin.png';
@@ -32,7 +32,7 @@ const projects: Array<Project> = [
   },
   {
     name: 'GR Town',
-    description: 'A wonderful 3D winter town built using legacy OpenGL',
+    description: 'College Project - A 3D winter town built using legacy OpenGL.',
     link: {
       href: 'https://github.com/Jynx/UW_Madison_ComputerGraphics_GrTown',
       label: 'github.com',
@@ -41,7 +41,7 @@ const projects: Array<Project> = [
   },
   {
     name: 'GR Train',
-    description: 'Take a ride on the 3D train! (Also legacy open GL)',
+    description: 'College Project - Take a ride on the 3D train! (Also legacy open GL)',
     link: {
       href: 'https://github.com/Jynx/UW_Madison_ComputerGraphics_Train_Project',
       label: 'github.com',
@@ -59,9 +59,18 @@ const projects: Array<Project> = [
   },
   {
     name: 'Unreal Engine Blueprint basics',
-    description: 'Projectile game based on tutorial from gamedev.tv',
+    description: 'Basic projectile exercise based on tutorial from gamedev.tv',
     link: {
       href: 'https://www.youtube.com/watch?v=yTgSTlZjYWY',
+      label: 'youtube.com',
+    },
+    logo: unreal,
+  },
+  {
+    name: 'Unreal Engine Basic Platformer',
+    description: 'Basic platformer based on tutorial from gamedev.tv',
+    link: {
+      href: 'https://youtu.be/ElK1qkcuwPc',
       label: 'youtube.com',
     },
     logo: unreal,
@@ -73,10 +82,7 @@ export default function Projects() {
     <>
       <Head>
         <title>Projects - Steve Volocyk</title>
-        <meta
-          name="description"
-          content="Things I’ve made"
-        />
+        <meta name="description" content="Things I’ve made" />
       </Head>
       <SimplePageLayout
         title="Where the tinkering happens."
