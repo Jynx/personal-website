@@ -75,6 +75,15 @@ const projects: Array<Project> = [
     },
     logo: unreal,
   },
+   {
+    name: 'Microsoft Playfab PaaS Unreal and Web Service integrations',
+    description: "Basic Unreal auth flows with Playfab using blueprints and UI widgets, and a basic web service levarging the Playfab SDK to expose player profile information",
+    link: {
+      href: 'https://youtu.be/7rwzKJN9qw0',
+      label: 'youtube.com',
+    },
+    logo: unreal,
+  },
 ];
 
 export default function Projects() {
