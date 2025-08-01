@@ -5,6 +5,7 @@ import omg from '../public/omg.png';
 import i11 from '../public/i11.png';
 import perf from '../public/perf.png';
 import sap from '../public/sap.png';
+import dreamhaven_logo from '../public/dreamhaven_logo.jpeg'
 
 interface Resume {
   company: string;
@@ -16,6 +17,13 @@ interface Resume {
 
 export default function WorkHistory() {
   let resume: Array<Resume> = [
+    {
+      company: 'Dreamhaven',
+      title: 'Sr Platform Engineer I & Senior Platform Engineer II',
+      logo: dreamhaven_logo,
+      start: 'July 2023',
+      end: 'Present',
+    },
     {
       company: 'One More Game',
       title: 'Sr Web Services and Platform Engineer',

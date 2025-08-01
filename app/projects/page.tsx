@@ -3,12 +3,14 @@ import Image, { StaticImageData } from 'next/image';
 import Card from '@/components/Card';
 import SimplePageLayout from '@/components/layout/SimplePageLayout';
 import { LinkIcon } from '@/components/icons/Icons';
+import clsx from 'clsx';
 
 import omg from '../../public/omg.png';
 import cabin from '../../public/cabin.png';
 import train from '../../public/train.png';
-import scarfy from '../../public/scarfy.png';
 import unreal from '../../public/Ureallogo.png';
+import sunder from '../../public/sunder.svg'
+import wild from '../../public/wild.webp'
 
 interface Project {
   name: string;
@@ -19,13 +21,30 @@ interface Project {
   };
   logo: StaticImageData;
 }
-
 const projects: Array<Project> = [
+  {
+    name: 'Wildgate',
+    description: 'Collaborated on Dreamhaven SDK development for an Epic PvPvE spaceshooter',
+    link: {
+      href: 'https://playwildgate.com/en-us',
+      label: 'Website',
+    },
+    logo: wild,
+  },
+  {
+    name: 'Sunderfolk',
+    description: 'Collaborated on Dreamhaven SDK development for an shared turn-based tactical RGP',
+    link: {
+      href: 'https://www.dreamhaven.com/games/sunderfolk',
+      label: 'Website',
+    },
+    logo: sunder,
+  },
   {
     name: 'One More Game Account Site',
     description: 'Minimal Account website we used for alpha testing at OMG',
     link: {
-      href: 'https://login.onemoregame.com',
+      href: 'https://www.linkedin.com/in/steven-volocyk/overlay/1635527339051/single-media-viewer/?profileId=ACoAABCLT9wBOGqGT_D6Gz7ukNnCiw6svt-NN7c',
       label: 'Website',
     },
     logo: omg,
@@ -49,33 +68,6 @@ const projects: Array<Project> = [
     logo: train,
   },
   {
-    name: '2D Side Scroller',
-    description: 'Side scroller based on tutorial from gamedev.tv',
-    link: {
-      href: 'https://github.com/Jynx/demo-sidescroller',
-      label: 'github.com',
-    },
-    logo: scarfy,
-  },
-  {
-    name: 'Unreal Engine Blueprint basics',
-    description: 'Basic projectile exercise based on tutorial from gamedev.tv',
-    link: {
-      href: 'https://www.youtube.com/watch?v=yTgSTlZjYWY',
-      label: 'youtube.com',
-    },
-    logo: unreal,
-  },
-  {
-    name: 'Unreal Engine Basic Platformer',
-    description: 'Basic platformer based on tutorial from gamedev.tv',
-    link: {
-      href: 'https://youtu.be/ElK1qkcuwPc',
-      label: 'youtube.com',
-    },
-    logo: unreal,
-  },
-   {
     name: 'Microsoft Playfab PaaS Unreal and Web Service integrations',
     description: "Basic Unreal auth flows with Playfab using blueprints and UI widgets, and a basic web service levarging the Playfab SDK to expose player profile information",
     link: {
@@ -106,13 +98,12 @@ export default function Projects() {
               <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={project.logo}
-                  alt=""
-                  className="h-8 w-8"
+                  className={clsx("h-15 w-15", project.name == "Wildgate" ? "bg-gray-800" : "")}
                   unoptimized
                 />
               </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                <Card.Link href={project.link.href}>{project.name}</Card.Link>
+                <Card.Link target="_blank" href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">

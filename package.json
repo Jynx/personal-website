@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.14",
-    "@tailwindcss/typography": "^0.5.9",
+    "@headlessui/react": "^1.7.19",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "20.2.1",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
@@ -24,8 +24,8 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "eslint": "^8.41.0",
-    "eslint-config-next": "^13.4.3",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^13.5.11",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0"
   }
