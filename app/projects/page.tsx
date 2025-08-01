@@ -33,7 +33,7 @@ const projects: Array<Project> = [
   },
   {
     name: 'Sunderfolk',
-    description: 'Collaborated on Dreamhaven SDK development for an shared turn-based tactical RGP',
+    description: 'Collaborated on Dreamhaven SDK development for an shared turn-based tactical RPG',
     link: {
       href: 'https://www.dreamhaven.com/games/sunderfolk',
       label: 'Website',
@@ -97,6 +97,7 @@ export default function Projects() {
             <Card as="li" key={project.name}>
               <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
+                  alt=""
                   src={project.logo}
                   className={clsx("h-15 w-15", project.name == "Wildgate" ? "bg-gray-800" : "")}
                   unoptimized
